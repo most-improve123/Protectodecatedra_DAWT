@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura de Venta</title>
+    <style>
+        body {
+            background-image: url('https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg');
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            padding: 70px;
+            border: 1px solid #000000;
+            background-color: white;
+
+        }
+
+        .logo {
+            float: right;
+            width: 80px;
+            height: 50px;
+            margin-right: -30px;
+            margin-top: -60px;
+
+
+        }
+
+        .hola {
+
+            height: 100px;
+            width: 120px;
+
+
+        }
+
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table th, .table td {
+            border: 1px solid #000000;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #f5f5f5;
+        }
+
+        .total {
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- ... (código HTML existente) ... -->
+
+<script>
+    // Obtener referencias a los elementos relevantes
+    const cantidadInput = document.querySelector('#cantidad');
+    const precioInput = document.querySelector('#precio');
+    const subtotalTd = document.querySelector('#subtotal');
+    const totalTd = document.querySelector('#total');
+
+    // Escuchar cambios en los campos de entrada
+    cantidadInput.addEventListener('input', calcularSubtotal);
+    precioInput.addEventListener('input', calcularSubtotal);
+
+    function calcularSubtotal() {
+        const cantidad = parseFloat(cantidadInput.value);
+        const precioUnitario = parseFloat(precioInput.value);
+        const subtotal = cantidad * precioUnitario;
+        subtotalTd.textContent = subtotal.toFixed(2); // Formatear a dos decimales
+        totalTd.textContent = subtotal.toFixed(2); // Aquí puedes sumar otros subtotales si hay más productos
+    }
+</script>
+
+<div class="container">
+    <div class="logo">
+        <img class="hola" src="img/boca.jpg" alt="Logo de la empresa">
+    </div>
+    <div class="header">
+        <h1>FACTURA DE VENTA</h1>
+        <p>Rajo Pole Paella Inc.</p>
+        <p>Canelera Melle 30, 37531 Aula, Auto</p>
+        <p>Virgen Blanca 63, 08759 Burgos, Burgos</p>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio Unitario</th>
+            <th>Subtotal</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Buen nacho</td>
+            <td>2</td>
+            <td>15.00</td>
+            <td>30.00</td>
+        </tr>
+        <tr>
+            <td>Galleta Pindi</td>
+            <td>2</td>
+            <td>15.00</td>
+            <td>30.00</td>
+        </tr>
+
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="3" class="total">Total:</td>
+            <td>60.00</td>
+        </tr>
+        </tfoot>
+    </table>
+    <div class="footer">
+        <p>CONDICIONES Y FORMA DE PAGO</p>
+        <p>El pago se realizará en un plazo de 15 días.</p>
+        <p>Gracias por su compra.</p>
+        <p>Banco Santander - MAN EX 12 3456 7891</p>
+    </div>
+</div>
+</body>
+</html>

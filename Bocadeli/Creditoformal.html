@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Comprobante Crédito Fiscal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .invoice-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .invoice-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .invoice-number {
+            text-align: right;
+        }
+
+        .client-info {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .total-row {
+            font-weight: bold;
+        }
+
+        .signature {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .logo {
+            float: right;
+            width: 80px;
+            height: 50px;
+            margin-right: 20px;
+            margin-top: -28px;
+
+
+        }
+
+        .hola {
+
+            height: 100px;
+            width: 120px;
+
+
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="logo">
+        <img class="hola" src="img/boca.jpg" alt="Logo de la empresa">
+    </div>
+    <div class="invoice-header">
+        <p class="invoice-title">COMPROBANTE CRÉDITO FISCAL</p>
+        <p>DIRECCIÓN. FINAL AVENIDA CERRO VERDE COLONIA SIERRA MORENA #2 SOYAPANGO, SAN SALVADOR..</p>
+        <div class="invoice-number">No. <span>0001</span></div>
+    </div>
+
+    <div class="client-info">
+        <p><span class="section-title">Cliente:</span> Dolores Cerén De Esquivel</p>
+        <p><span class="section-title">Direccion:</span>Calle El Milagro Carr. al Puerto de La Libertad km 27</p>
+        <p><span class="section-title">Municipio:</span> San Marcos</p>
+        <p><span class="section-title">Registro No.:</span> 092304324</p>
+
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>Cantidad</th>
+            <th>Descripción</th>
+            <th>Precio unitario</th>
+            <th>Ventas exentas</th>
+            <th>Ventas sujetas al 0%</th>
+            <th>Ventas sujetas al 13%</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Frijolí</td>
+            <td>$100.00</td>
+            <td>$0.00</td>
+            <td>$0.00</td>
+            <td>$13.00</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Buen nacho</td>
+            <td>$100.00</td>
+            <td>$0.00</td>
+            <td>$0.00</td>
+            <td>$13.00</td>
+        </tr>
+
+        <tr>
+
+        </tr>
+        <td>30</td>
+        <td>Galletas</td>
+        <td>$100.00</td>
+        <td>$0.00</td>
+        <td>$0.00</td>
+        <td>$13.00</td>
+        </tr>
+
+        <tr>
+            <td>40</td>
+            <td>Quesi trix</td>
+            <td>$100.00</td>
+            <td>$0.00</td>
+            <td>$0.00</td>
+            <td>$13.00</td>
+        </tr>
+
+        <tr>
+            <td>80</td>
+            <td>Piguis</td>
+            <td>$100.00</td>
+            <td>$0.00</td>
+            <td>$0.00</td>
+            <td>$13.00</td>
+        </tr>
+
+        <tr>
+            <td>20</td>
+            <td>Ranchitas</td>
+            <td>$100.00</td>
+            <td>$0.00</td>
+            <td>$0.00</td>
+            <td>$13.00</td>
+        </tr>
+        <tr>
+            <td>90</td>
+            <td>Frijolí de chile</td>
+            <td>$100.00</td>
+            <td>$0.00</td>
+            <td>$0.00</td>
+            <td>$13.00</td>
+        </tr>
+        <tr>
+            <td>120</td>
+            <td>Quesi trix de chile</td>
+            <td>$100.00</td>
+            <td>$0.00</td>
+            <td>$0.00</td>
+            <td>$13.00</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr class="total-row">
+            <td colspan="5" style="text-align: right;">Subtotal:</td>
+            <td>$409.00</td>
+        </tr>
+        <!-- Agrega más totales si es necesario -->
+        </tfoot>
+    </table>
+    <div class="signature">
+        Firma: ________________________
+    </div>
+</div>
+</body>
+</html>
